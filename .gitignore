@@ -1,2 +1,4 @@
 vendor
 Gemfile.lock
+example_basic/templates
+example_partials/templates

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+	<head>
+		<meta charset="utf-8">
+		<title>Guard-Steering partials example</title>
+		<script type="text/javascript" src="https://raw.github.com/pixeltrix/steering-source/master/lib/steering/handlebars.runtime.js"></script>
+		<script type="text/javascript" src="templates/list.handlebars.js"></script>
+		<script type="text/javascript" src="templates/list_item.handlebars.js"></script>
+	</head>
+
+	<body>
+		<div id="list">There should be a list here once you compile the templates. See README!</div>
+	</body>
+
+	<script type="text/javascript">
+			var template = Handlebars.templates['list'];
+			var placeholderElement = document.getElementById('list');
+			placeholderElement.innerHTML = template({
+				title: 'My list',
+				listitems: [
+					{
+						avatar: 'http://placekitten.com/50/50',
+						name: 'John Doe'
+					},
+					{
+						avatar: 'http://placekitten.com/50/50',
+						name: 'Joe Public'
+					},
+					{
+						avatar: 'http://placekitten.com/50/50',
+						name: 'Joe Plumber'
+					}
+				]
+			});
+		</script>
+</html>
